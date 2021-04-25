@@ -1,0 +1,3 @@
+[submodule "i3blocks-contrib"]
+	path = i3blocks-contrib
+	url = ./i3blocks/i3blocks-contrib/
