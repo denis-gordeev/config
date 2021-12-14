@@ -64,10 +64,10 @@ command=/home/denis/.config/i3blocks/i3blocks-contrib/memory/memory
 label=MEM
 interval=30
 
-[backlight]
-command=/home/denis/.config/i3blocks/i3blocks-contrib/backlight/backlight
-label=☀
-interval=20
+#[backlight]
+#command=/home/denis/.config/i3blocks/i3blocks-contrib/backlight/backlight
+#label=☀
+#interval=20
 #STEP_SIZE=5
 #USE_SUDO=0
 
@@ -94,11 +94,18 @@ label=⌨
 command=xset -q|grep LED| awk '{ if (substr ($10,5,1) == 1) print "RU"; else print "EN"; }'
 interval=1
 
-#[battery]
+[battery]
+command=/home/denis/.config/i3blocks/i3blocks-contrib/battery/battery
 #command=$SCRIPT_DIR/battery.py
 #command=/home/denis/.config/i3blocks/battery.py
 #markup=pango
-#interval=30
+interval=1
 
-[shutdown]
-command=/home/denis/.config/i3blocks/i3blocks-contrib/shutdown_menu/shutdown_menu
+#[shutdown]
+#command=/home/denis/.config/i3blocks/i3blocks-contrib/shutdown_menu/shutdown_menu
+
+[mediaplayer]
+command=/home/denis/.config/i3blocks/i3blocks-contrib/mediaplayer/mediaplayer
+instance=firefox
+interval=5
+signal=10
